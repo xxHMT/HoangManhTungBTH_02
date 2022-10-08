@@ -5,7 +5,7 @@ namespace HoangManhTungBTH_02.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext (DbContextOption<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
         }
