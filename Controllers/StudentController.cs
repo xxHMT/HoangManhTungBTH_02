@@ -115,7 +115,7 @@ namespace HoangManhTungBTH_02.Controllers
         }
         private bool StudentExists(string id)
         {
-            return _context.Students.Any(e =>e.StudentID == id);
+            return _context.Students.Any(e => e.StudentID == id);
         }
         
     }
