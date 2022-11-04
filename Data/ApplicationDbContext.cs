@@ -10,5 +10,7 @@ namespace HoangManhTungBTH_02.Data
 
         }
         public DbSet<Student> Students {get; set;}
+
+        public DbSet<HoangManhTungBTH_02.Models.Employee>Employee {get; set;}
     }
 }

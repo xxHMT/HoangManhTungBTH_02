@@ -1,18 +1,18 @@
 using System.Data;
 using OfficeOpenXml;
-
 namespace HoangManhTungBTH_02.Models.Process
 {
-    public class ExcelProcess{
-        public DataTable ExcelToDataTable (string strPath)
+    public class ExcelProcess
+    {
+        public DataTable ExcelToDataTable(string strPath)
         {
             FileInfo fi = new FileInfo(strPath);
             ExcelPackage excelPackage = new ExcelPackage(fi);
             DataTable dt = new DataTable();
             ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[0];
-            
+
             //check if the worksheet is completely empty
-            
+
             if (worksheet.Dimension == null)
             {
                 return dt;
@@ -44,14 +44,14 @@ namespace HoangManhTungBTH_02.Models.Process
                 // add column name to the list to count the duplicates
                 columnNames.Add(columnName);
 
-                //count the duplicate column names and make them uniue to avoid the exception
+                //count the duplicate column names and make them unique to avoid the exception
 
                 int occurrences = columnNames.Count(x => x.Equals(columnName));
 
                 if (occurrences > 1)
                 {
                     columnName = columnName + "_" + occurrences;
-                } 
+                }
 
                 // Add the column to the database
 
@@ -68,9 +68,9 @@ namespace HoangManhTungBTH_02.Models.Process
 
                 //loop all cells in the row
 
-                foreach (var cells in row)
+                foreach (var cell in row)
                 {
-                    newRow(cells.Start.Column - 1) = cells.Text;
+                    newRow[cell.Start.Column - 1] = cell.Text;
                 }
                 dt.Rows.Add(newRow);
             }

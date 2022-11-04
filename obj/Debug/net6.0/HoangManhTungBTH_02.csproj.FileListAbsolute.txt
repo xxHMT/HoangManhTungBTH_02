@@ -282,3 +282,9 @@ D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\obj\Debug\net6.0\refint\H
 D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\obj\Debug\net6.0\HoangManhTungBTH_02.pdb
 D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\obj\Debug\net6.0\HoangManhTungBTH_02.genruntimeconfig.cache
 D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\obj\Debug\net6.0\ref\HoangManhTungBTH_02.dll
+D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\bin\Debug\net6.0\EPPlus.dll
+D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\bin\Debug\net6.0\EPPlus.Interfaces.dll
+D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Tài liệu học tập\NetCore\HoangManhTungBTH_02\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

@@ -1,7 +1,8 @@
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using HoangManhTungBTH_02.Models.Process;
 using HoangManhTungBTH_02.Models;
+using HoangManhTungBTH_02.Data;
 
 namespace HoangManhTungBTH_02.Controllers
 {
@@ -12,7 +13,7 @@ namespace HoangManhTungBTH_02.Controllers
         private ExcelProcess _excelProcess = new ExcelProcess();
 
 
-        public EmployeeController(ApplicationDbcontext context)
+        public EmployeeController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -47,8 +48,9 @@ namespace HoangManhTungBTH_02.Controllers
                 else
                 {
                     // rename file when upload to sever
-                    var FileName = DateTime.Now.ToShortTimeString() + fileExtension;
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Upload/Excels", FileName);
+                    var fileName = DateTime.Now.ToShortTimeString() + fileExtension;
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Uploads/Excels", fileName);
+                    var fileLocation = new FileInfo(filePath).ToString();
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         //save file to sever
@@ -75,7 +77,7 @@ namespace HoangManhTungBTH_02.Controllers
 
                         //save to DB
 
-                        await _context.SaveChangesAsync()
+                        await _context.SaveChangesAsync();
                         return RedirectToAction(nameof(Index));
                     }
                 }
